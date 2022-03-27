@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Suger">
-    <meta name="description" content="Suger">
+    <meta name="keywords" content="Springboot, Suger">
+    <meta name="description" content="Spring-boot学习官方文档：https://docs.spring.io/spring-boot/docs/current/reference/html/index.html
+一：SpringBoot HelloWord一个功能：浏">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Suger</title>
+    <title>Springboot | Suger</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -420,12 +421,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">Springboot</h1>
                 </div>
             </div>
         </div>
@@ -539,9 +540,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Springboot/">
+                                <span class="chip bg-color">Springboot</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -553,7 +558,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-03-26
+                    2022-03-27
                 </div>
                 
 
@@ -577,9 +582,129 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <hr>
-<p>title: 404<br>date: 2018-09-30 17:25:30<br>type: “404”<br>layout: “404”<br>description: “Oops～，我崩溃了！找不到你想要的页面 :(“<br>​—</p>
+                <h1 id="Spring-boot学习"><a href="#Spring-boot学习" class="headerlink" title="Spring-boot学习"></a>Spring-boot学习</h1><p>官方文档：<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-boot/docs/current/reference/html/index.html">https://docs.spring.io/spring-boot/docs/current/reference/html/index.html</a></p>
+<h2 id="一：SpringBoot-HelloWord"><a href="#一：SpringBoot-HelloWord" class="headerlink" title="一：SpringBoot HelloWord"></a>一：SpringBoot HelloWord</h2><p>一个功能：浏览器发送hello请求并处理，相应Hello Word字符串</p>
+<h3 id="1-创建一个新的Maven工程；Jar"><a href="#1-创建一个新的Maven工程；Jar" class="headerlink" title="1.创建一个新的Maven工程；Jar"></a>1.创建一个新的Maven工程；Jar</h3><h3 id="2-导入一个Springboot相关的依赖"><a href="#2-导入一个Springboot相关的依赖" class="headerlink" title="2.导入一个Springboot相关的依赖"></a>2.导入一个Springboot相关的依赖</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java">&lt;parent&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+    &lt;version&gt;1.5.9.RELEASE&lt;/version&gt;
+&lt;/parent&gt;
+    
+&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+
+
+<h3 id="3-编写一个主程序类MainApplication-启动主程序"><a href="#3-编写一个主程序类MainApplication-启动主程序" class="headerlink" title="3.编写一个主程序类MainApplication 启动主程序"></a>3.编写一个主程序类MainApplication 启动主程序</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java">package leyue.ljp.boot;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+/**
+ *  @SpringBootApplication 来标注主程序类 说明这是一个Spring boot应用
+ */
+@SpringBootApplication
+public class MainApplication {
+    public static void main(String[] args) {
+        //将springboot启动起来
+        SpringApplication.run(MainApplication.class,args);
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="4-编写Contrtoller层和Service层"><a href="#4-编写Contrtoller层和Service层" class="headerlink" title="4.编写Contrtoller层和Service层"></a>4.编写Contrtoller层和Service层</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java">package leyue.ljp.boot.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloController {
+    @RequestMapping("/hello")
+    public String handle01(){
+        return "Hello my first spring-boot2!";
+    }
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="5、运行主程序测试"><a href="#5、运行主程序测试" class="headerlink" title="5、运行主程序测试"></a>5、运行主程序测试</h3><h3 id="6、简化部署"><a href="#6、简化部署" class="headerlink" title="6、简化部署"></a>6、简化部署</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java">&lt;!-- 这个插件，可以将应用打包成一个可执行的jar包；--&gt;
+   &lt;build&gt;
+       &lt;plugins&gt;
+           &lt;plugin&gt;
+               &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+               &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+           &lt;/plugin&gt;
+       &lt;/plugins&gt;
+   &lt;/build&gt;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="二、Spring在核心配置文件"><a href="#二、Spring在核心配置文件" class="headerlink" title="二、Spring在核心配置文件"></a>二、Spring在核心配置文件</h2><h3 id="使用-Value进行映射"><a href="#使用-Value进行映射" class="headerlink" title="使用@Value进行映射"></a>使用@Value进行映射</h3><p>一、Spring在核心配置文件application.properties自定义配置一个一个获取@Value</p>
+<h3 id="1-新建一个application-properties"><a href="#1-新建一个application-properties" class="headerlink" title="1.新建一个application.properties"></a>1.新建一个application.properties</h3><pre class="line-numbers language-properties" data-language="properties"><code class="language-properties">server.port=8080
+
+server.servlet.context-path=/
+
+school.name=zhangshanzhiyejishuxueyuean
+websit=https:175.178.51.999
+
+asd.name=李津澎
+asd.websit=https://175.178.51.1111<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-新建一个config的包-新建asdConfig的类"><a href="#2-新建一个config的包-新建asdConfig的类" class="headerlink" title="2.新建一个config的包 新建asdConfig的类"></a>2.新建一个config的包 新建asdConfig的类</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java">package leyue.ljp.boot.config;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
+@Component//交给Spring管理
+@ConfigurationProperties(prefix = "asd")//标注这个是头的名称 对应properties那边
+public class asdConfig {
+    private String name;
+    private String websit;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getWebsit() {
+        return websit;
+    }
+
+    public void setWebsit(String websit) {
+        this.websit = websit;
+    }
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-新建一个Controller"><a href="#3-新建一个Controller" class="headerlink" title="3.新建一个Controller"></a>3.新建一个Controller</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java">package leyue.ljp.boot.web;
+import leyue.ljp.boot.config.asdConfig;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class IndexController {
+    @Autowired //自动注入
+    private asdConfig asdConfig;
+    @RequestMapping("fuck")
+    public String fuck(){
+        return "asdConfig："+asdConfig.getName()+" "+"asdwebsit:"+asdConfig.getWebsit();
+    }
+
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-测试"><a href="#4-测试" class="headerlink" title="4.测试"></a>4.测试</h3><h2 id="三、集成一个jsp"><a href="#三、集成一个jsp" class="headerlink" title="三、集成一个jsp"></a>三、集成一个jsp</h2>
                 
             </div>
             <hr/>
@@ -605,7 +730,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/404/index.html">http://example.com/404/index.html</a>
+                    <a href="http://example.com/2022/03/27/Springboot/">http://example.com/2022/03/27/Springboot/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -642,7 +767,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/Springboot/">
+                                    <span class="chip bg-color">Springboot</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -814,18 +943,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/404/index.html">
+                <a href="/2022/03/27/SpringMvc-0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="SpringMvc">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">SpringMvc</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -835,9 +963,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-26
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-27
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -846,7 +974,14 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/SpringMvc/">
+                        <span class="chip bg-color">SpringMvc</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -854,16 +989,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/404/index.html">
+                <a href="/2022/03/27/%E5%AD%A6%E4%B9%A0%E7%BD%91%E5%9D%80-1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="学习网址">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">学习网址</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -874,7 +1009,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-27
                             </span>
                         <span class="publish-author">
                             
@@ -884,7 +1019,14 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%BD%91%E5%9D%80/">
+                        <span class="chip bg-color">学习网址</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

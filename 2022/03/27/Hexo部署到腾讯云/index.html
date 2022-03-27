@@ -4,8 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Suger">
-    <meta name="description" content="Suger">
+    <meta name="keywords" content="Hexo部署到腾讯云, Suger">
+    <meta name="description" content="Hexo部署到腾讯云1.环境本地Windows10操作系统
+腾讯云Cenots7.6服务器
+2.准备Hexo 本地博客
+Xshell 链接到你的服务器
+二、云服务器配置Git1.安装依赖库
+yum install curl-devel ex">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +22,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Suger</title>
+    <title>Hexo部署到腾讯云 | Suger</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -420,12 +425,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">Hexo部署到腾讯云</h1>
                 </div>
             </div>
         </div>
@@ -553,7 +558,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-03-26
+                    2022-03-27
                 </div>
                 
 
@@ -577,9 +582,120 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <hr>
-<p>title: 404<br>date: 2018-09-30 17:25:30<br>type: “404”<br>layout: “404”<br>description: “Oops～，我崩溃了！找不到你想要的页面 :(“<br>​—</p>
+                <h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="Hexo部署到腾讯云"><a href="#Hexo部署到腾讯云" class="headerlink" title="Hexo部署到腾讯云"></a>Hexo部署到腾讯云</h3><h5 id="1-环境"><a href="#1-环境" class="headerlink" title="1.环境"></a>1.环境</h5><p>本地Windows10操作系统</p>
+<p>腾讯云Cenots7.6服务器</p>
+<h5 id="2-准备"><a href="#2-准备" class="headerlink" title="2.准备"></a>2.准备</h5><p>Hexo 本地博客</p>
+<p>Xshell 链接到你的服务器</p>
+<h3 id="二、云服务器配置Git"><a href="#二、云服务器配置Git" class="headerlink" title="二、云服务器配置Git"></a>二、云服务器配置Git</h3><p>1.安装依赖库</p>
+<pre class="line-numbers language-none"><code class="language-none">yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+<p>2.安装编译工具</p>
+<pre class="line-numbers language-none"><code class="language-none">yum install gcc perl-ExtUtils-MakeMaker package<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>3.查看git的版本y</p>
+<pre class="line-numbers language-none"><code class="language-none">git version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>4.删除git</p>
+<pre class="line-numbers language-none"><code class="language-none">yum remove git -y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>5.下载解压最新版.</p>
+<pre class="line-numbers language-apl" data-language="apl"><code class="language-apl">cd /usr/local/src #下载的目录 wget https://www.kernel.org/pub/software/scm/git/git-2.28.0.tar.gz #下载最新版 tar -zxvf git-2.28.0.tar.gz #解压到当前文件夹
+来源: Fuchenchenle
+文章作者: Fuchenchenle
+文章链接: https://fuchenchenle.cn/2020/08/18/hexo%E9%83%A8%E7%BD%B2%E8%85%BE%E8%AE%AF%E4%BA%91/
+本文章著作权归作者所有，任何形式的转载都请注明出处。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>6.编辑并安装</p>
+<pre class="line-numbers language-api" data-language="api"><code class="language-api">cd git-2.28.0    #进入文件夹
+make prefix=/usr/local/git all    #编译源码
+make prefix=/usr/local/git install    #安装路径<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>7.配置git的环境变量</p>
+<pre class="line-numbers language-none"><code class="language-none">echo 'export PATH=$PATH:/usr/local/git/bin' &gt;&gt; /etc/bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>8.刷新环境变量</p>
+<pre class="line-numbers language-none"><code class="language-none">source /etc/bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>9.查看版本号</p>
+<pre class="line-numbers language-none"><code class="language-none">git --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>10创建git用户并且修改权限</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">adduser fuchen passwd fuchen chmod 740 /etc/sudoers vim /etc/sudoers root ALL=(ALL) ALL fuchen ALL=(ALL) ALL
+来源: Fuchenchenle
+文章作者: Fuchenchenle
+文章链接: https://fuchenchenle.cn/2020/08/18/hexo%E9%83%A8%E7%BD%B2%E8%85%BE%E8%AE%AF%E4%BA%91/
+本文章著作权归作者所有，任何形式的转载都请注明出处。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>11.本地windows10使用Gitbash创建密钥</p>
+<pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>12.将本地创建id_rsa.pub中文件复制</p>
+<pre class="line-numbers language-none"><code class="language-none">su fuchen
+mkdir ~/.ssh
+vim ~/.ssh/authorized_keys<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>13.本地测试</p>
+<pre class="line-numbers language-none"><code class="language-none">ssh -v fuchen@服务器ip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="三、云服务器网站配置"><a href="#三、云服务器网站配置" class="headerlink" title="三、云服务器网站配置"></a>三、云服务器网站配置</h3><p>1.创建网站目录并且设置权限</p>
+<pre class="line-numbers language-none"><code class="language-none">su root
+mkdir /home/hexo
+chown fuchen:fuchen -R /home/hexo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>2.安装Nginx</p>
+<pre class="line-numbers language-none"><code class="language-none">yum install -y nginx
+systemctl start nginx.service    #启动服务<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>3.修改Nginx配置文件</p>
+<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">vim /etc/nginx/nginx.conf 
+ server { 
+	listen 80 default_server; 
+	listen [::]:80 default_server; 
+	server_name fuchenchenle.cn; #域名 
+ 	root /home/hexo; #网站目录<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>4.重启服务器</p>
+<pre class="line-numbers language-none"><code class="language-none">systemctl restart nginx.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>5.建立git仓库</p>
+<pre class="line-numbers language-none"><code class="language-none"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>6.同步网站根目录</p>
+<pre class="line-numbers language-none"><code class="language-none">vim blog.git/hooks/post-receive
+
+#!/bin/sh
+git --work-tree=/home/hexo --git-dir=/home/fuchen/blog.git checkout -f<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>7.修改权限</p>
+<pre class="line-numbers language-none"><code class="language-none"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>8.在windows10本地hexo目录修改_config.yml文件</p>
+<pre class="line-numbers language-none"><code class="language-none">deploy:
+  type: git
+  repository: fuchen@49.232.59.235:/home/fuchen/blog.git    #用户名@服务器Ip:git仓库位置
+  branch: master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>9.在本机gitbash部署</p>
+<pre class="line-numbers language-none"><code class="language-none">hexo clean
+hexo g -d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="四、常见报错"><a href="#四、常见报错" class="headerlink" title="四、常见报错"></a>四、常见报错</h3><h5 id="1-git-upload-pack-未找到命令"><a href="#1-git-upload-pack-未找到命令" class="headerlink" title="1. git-upload-pack: 未找到命令"></a>1. git-upload-pack: 未找到命令</h5><pre class="line-numbers language-none"><code class="language-none">bash: git-upload-pack: command not found
+fatal: Could not read from remote repository.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>解决方法</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo ln -s  /usr/local/git/bin/git-upload-pack  /usr/bin/git-upload-pack<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h5 id="3-无法远程连接获取"><a href="#3-无法远程连接获取" class="headerlink" title="3.无法远程连接获取"></a>3.无法远程连接获取</h5><pre class="line-numbers language-none"><code class="language-none">fatal: Could not read from remote repository.<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>解决方法</p>
+<pre class="line-numbers language-none"><code class="language-none">重试或者 删掉本地ssh公钥重新上传至服务器<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h5 id="4-key出错"><a href="#4-key出错" class="headerlink" title="4.key出错"></a>4.key出错</h5><pre class="line-numbers language-none"><code class="language-none">Host key verification failed.<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>解决方法</p>
+<pre class="line-numbers language-none"><code class="language-none">ssh-keygen -R 你要访问的IP地址<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -605,7 +721,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/404/index.html">http://example.com/404/index.html</a>
+                    <a href="http://example.com/2022/03/27/Hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E8%85%BE%E8%AE%AF%E4%BA%91/">http://example.com/2022/03/27/Hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E8%85%BE%E8%AE%AF%E4%BA%91/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -814,18 +930,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/404/index.html">
+                <a href="/2022/03/27/1-x%E8%80%83%E8%AF%95/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="1+x考试">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">1+x考试</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -835,9 +950,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-26
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-27
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -846,7 +961,14 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/1-x%E8%80%83%E8%AF%95/">
+                        <span class="chip bg-color">1+x考试</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -854,16 +976,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/404/index.html">
+                <a href="/2022/03/27/Vue/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Vue">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">Vue</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -874,7 +996,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-27
                             </span>
                         <span class="publish-author">
                             
@@ -884,7 +1006,14 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Vue/">
+                        <span class="chip bg-color">Vue</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
