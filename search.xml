@@ -5,6 +5,19 @@
     
     <entry>
       <title></title>
+      <link href="/2022/03/27/Hexo/"/>
+      <url>/2022/03/27/Hexo/</url>
+      
+        <content type="html"><![CDATA[<p>在上一篇教程中，我们在本地搭建了一个博客，并且修改了博客默认的主题样式，在这篇文章中，我们对博客的基础样式进行修改，全文参考“<a href="http://theme-next.iissnan.com/getting-started.html%E2%80%9D%E6%AD%A4%E7%BD%91%E5%9D%80%E3%80%82">http://theme-next.iissnan.com/getting-started.html”此网址。</a></p><p>在 <a href="https://so.csdn.net/so/search?q=Hexo&amp;spm=1001.2101.3001.7020">Hexo</a> 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。</p><p>1 语言设置</p><p>打开站点目录下的“_config.yml”文件，修改“language”的值，相应的参考和结果如下：</p><p><img src="https://img-blog.csdn.net/20180803165505846?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTE3MDI0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p><p><img src="https://img-blog.csdn.net/2018080316560074?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTE3MDI0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p><p>2 设置昵称</p><p>修改站点目录下的配置文件中的“author”属性，如图：</p><p><img src="https://img-blog.csdn.net/20180803165615286?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTE3MDI0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p><p>3 设置站点描述</p><p>修改站点目录下的配置文件中的“description”属性，如图：</p><p><img src="https://img-blog.csdn.net/20180803165632990?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTE3MDI0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p><p>4 设置头像</p><p>头像的设置需要修改的是主题配置文件而不是站点配置文件，打开“next”文件夹下的“_config.yml”文件，在“next/source/”目录下的“image”或者自己新建一个文件夹，将要设置的头像图片放里面，然后在配置文件修改“avatar”属性，如图：</p><p><img src="https://img-blog.csdn.net/20180803165651815?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTE3MDI0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p><p>至此，基础设置已经修改完成，如果要进行其他的设置，请参看本教程开始处给的网址进行设置，在git客户端输入：</p><p><img src="https://img-blog.csdn.net/20180803165708801?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTE3MDI0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p><p>最终结果如下图，关于本地博客部署到github的教程请看另一篇文章：</p><p><img src="https://img-blog.csdn.net/20180803165733820?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTE3MDI0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p><p>附：</p><p>作者在配置文件修改完之后执行“hexo clean”命令时报了一个类似于“ FATAL can not read a block mapping entry; a multiline key may not be an implicit key at line 70, column 1: …”的错误，通过仔细查看才发现，原来是属性名和属性值中间要在冒号后面空一格，如图：</p><p><img src="https://img-blog.csdn.net/20180803165751176?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTE3MDI0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p><p>————————————————<br>本文为CSDN博主「X北辰北」的原创文章<br>原文链接：<a href="https://blog.csdn.net/qq_35117024/article/details/81390780">https://blog.csdn.net/qq_35117024/article/details/81390780</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/2022/03/27/package/"/>
       <url>/2022/03/27/package/</url>
       
@@ -17,11 +30,11 @@
     
     
     <entry>
-      <title>Hello World</title>
+      <title></title>
       <link href="/2022/03/26/hello-world/"/>
       <url>/2022/03/26/hello-world/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new "My New Post"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
       
       
