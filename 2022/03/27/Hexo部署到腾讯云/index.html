@@ -599,10 +599,10 @@ yum install curl-devel ex">
 <pre class="line-numbers language-none"><code class="language-none">yum remove git -y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>5.下载解压最新版.</p>
-<pre class="line-numbers language-apl" data-language="apl"><code class="language-apl">cd /usr/local/src #下载的目录 wget https://www.kernel.org/pub/software/scm/git/git-2.28.0.tar.gz #下载最新版 tar -zxvf git-2.28.0.tar.gz #解压到当前文件夹
-来源: Fuchenchenle
-文章作者: Fuchenchenle
-文章链接: https://fuchenchenle.cn/2020/08/18/hexo%E9%83%A8%E7%BD%B2%E8%85%BE%E8%AE%AF%E4%BA%91/
+<pre class="line-numbers language-apl" data-language="apl"><code class="language-apl">cd <span class="token monadic-operator operator">/</span>usr<span class="token monadic-operator operator">/</span>local<span class="token monadic-operator operator">/</span>src <span class="token constant">#</span>下载的目录 wget https<span class="token dfn builtin">:</span><span class="token monadic-operator operator">/</span><span class="token monadic-operator operator">/</span>www<span class="token dyadic-operator operator">.</span>kernel<span class="token dyadic-operator operator">.</span>org<span class="token monadic-operator operator">/</span>pub<span class="token monadic-operator operator">/</span>software<span class="token monadic-operator operator">/</span>scm<span class="token monadic-operator operator">/</span>git<span class="token monadic-operator operator">/</span>git<span class="token function">-</span><span class="token number">2.28</span><span class="token number">.0</span><span class="token dyadic-operator operator">.</span>tar<span class="token dyadic-operator operator">.</span>gz <span class="token constant">#</span>下载最新版 tar <span class="token function">-</span>zxvf git<span class="token function">-</span><span class="token number">2.28</span><span class="token number">.0</span><span class="token dyadic-operator operator">.</span>tar<span class="token dyadic-operator operator">.</span>gz <span class="token constant">#</span>解压到当前文件夹
+来源<span class="token dfn builtin">:</span> Fuchenchenle
+文章作者<span class="token dfn builtin">:</span> Fuchenchenle
+文章链接<span class="token dfn builtin">:</span> https<span class="token dfn builtin">:</span><span class="token monadic-operator operator">/</span><span class="token monadic-operator operator">/</span>fuchenchenle<span class="token dyadic-operator operator">.</span>cn<span class="token monadic-operator operator">/</span><span class="token number">2020</span><span class="token monadic-operator operator">/</span><span class="token number">08</span><span class="token monadic-operator operator">/</span><span class="token number">18</span><span class="token monadic-operator operator">/</span>hexo%E9%<span class="token number">83</span>%A8%E7%BD%B2%E8%<span class="token number">85</span>%BE%E8%AE%AF%E4%BA%<span class="token number">91</span><span class="token monadic-operator operator">/</span>
 本文章著作权归作者所有，任何形式的转载都请注明出处。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
@@ -622,10 +622,10 @@ make prefix=/usr/local/git install    #安装路径<span aria-hidden="true" clas
 <pre class="line-numbers language-none"><code class="language-none">git --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>10创建git用户并且修改权限</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">adduser fuchen passwd fuchen chmod 740 /etc/sudoers vim /etc/sudoers root ALL=(ALL) ALL fuchen ALL=(ALL) ALL
-来源: Fuchenchenle
-文章作者: Fuchenchenle
-文章链接: https://fuchenchenle.cn/2020/08/18/hexo%E9%83%A8%E7%BD%B2%E8%85%BE%E8%AE%AF%E4%BA%91/
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">adduser fuchen passwd fuchen chmod <span class="token number">740</span> <span class="token operator">/</span>etc<span class="token operator">/</span>sudoers vim <span class="token operator">/</span>etc<span class="token operator">/</span>sudoers root ALL<span class="token operator">=</span><span class="token punctuation">(</span>ALL<span class="token punctuation">)</span> ALL fuchen ALL<span class="token operator">=</span><span class="token punctuation">(</span>ALL<span class="token punctuation">)</span> ALL
+来源<span class="token operator">:</span> <span class="token class-name">Fuchenchenle</span>
+文章作者<span class="token operator">:</span> <span class="token class-name">Fuchenchenle</span>
+文章链接<span class="token operator">:</span> https<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>fuchenchenle<span class="token punctuation">.</span>cn<span class="token operator">/</span><span class="token number">2020</span><span class="token operator">/</span><span class="token number">08</span><span class="token operator">/</span><span class="token number">18</span><span class="token operator">/</span>hexo<span class="token operator">%</span>E9<span class="token operator">%</span><span class="token number">83</span><span class="token operator">%</span>A8<span class="token operator">%</span>E7<span class="token operator">%</span>BD<span class="token operator">%</span>B2<span class="token operator">%</span>E8<span class="token operator">%</span><span class="token number">85</span><span class="token operator">%</span>BE<span class="token operator">%</span>E8<span class="token operator">%</span>AE<span class="token operator">%</span>AF<span class="token operator">%</span>E4<span class="token operator">%</span>BA<span class="token operator">%</span><span class="token number">91</span><span class="token operator">/</span>
 本文章著作权归作者所有，任何形式的转载都请注明出处。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>11.本地windows10使用Gitbash创建密钥</p>
@@ -1189,7 +1189,7 @@ fatal: Could not read from remote repository.<span aria-hidden="true" class="lin
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -1219,6 +1219,60 @@ fatal: Could not read from remote repository.<span aria-hidden="true" class="lin
             <br>
 
             <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2022";
+                        var startMonth = "3";
+                        var startDate = "26";
+                        var startHour = "13";
+                        var startMinute = "44";
+                        var startSecond = "22";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'en';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
             
             <br>
             
