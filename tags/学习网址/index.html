@@ -38,6 +38,16 @@
 
 
 
+   <style>
+    body{
+       background-image: url(http://kkk.ljpsuger.com/img/3.jpg);
+       background-repeat:no-repeat;
+       background-size: 100% 100%;
+       background-attachment:fixed;
+    }
+</style>
+
+
 
 <body>
     <header class="navbar-fixed">
@@ -461,9 +471,8 @@
 
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Minutes().getMinutes() + '.jpg)');
+
 </script>
 
 
@@ -492,10 +501,19 @@
                 </a>
                 
                 
+                <a href="/tags/SpringMvc/" title="SpringMvc: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="SpringMvc" style="background-color: #F5EEF8;">SpringMvc
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/tags/Springboot/" title="Springboot: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Springboot" style="background-color: #F5EEF8;">Springboot
+                            data-tagname="Springboot" style="background-color: #D5F5E3;">Springboot
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -504,7 +522,7 @@
                 <a href="/tags/Vue/" title="Vue: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Vue" style="background-color: #D5F5E3;">Vue
+                            data-tagname="Vue" style="background-color: #E8F8F5;">Vue
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -513,16 +531,7 @@
                 <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%BD%91%E5%9D%80/" title="学习网址: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
-                            data-tagname="学习网址" style="background-color: #E8F8F5;">学习网址
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/SpringMvc/" title="SpringMvc: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="SpringMvc" style="background-color: #FEF9E7;">SpringMvc
+                            data-tagname="学习网址" style="background-color: #FEF9E7;">学习网址
                         <span class="tag-length">1</span>
                     </span>
                 </a>
