@@ -38,16 +38,6 @@
 
 
 
-   <style>
-    body{
-       background-image: url(http://kkk.ljpsuger.com/img/3.jpg);
-       background-repeat:no-repeat;
-       background-size: 100% 100%;
-       background-attachment:fixed;
-    }
-</style>
-
-
 
 <body>
     <header class="navbar-fixed">
@@ -478,8 +468,9 @@
 
 
 <script>
-$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Minutes().getMinutes() + '.jpg)');
-
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
 
@@ -495,7 +486,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Minutes().get
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/">8</a></span>
+    <span class="count"><a href="/">9</a></span>
     <span class="name">Posts</span>
 </div>
 
@@ -520,7 +511,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Minutes().get
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/">8</a></span>
+    <span class="count"><a href="/">9</a></span>
     <span class="name">Posts</span>
 </div>
 
@@ -673,7 +664,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Minutes().get
                 name: 'Number of posts',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,0,0,8],
+                data: [0,0,0,0,0,0,0,0,0,0,0,0,9],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -739,7 +730,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Minutes().get
         xAxis: [
             {
                 type: 'category',
-                data: ["1+x考试","SpringMvc","Springboot","Vue","学习网址"]
+                data: ["1+x考试","Springboot","Vue","SpringMvc","学习网址"]
             }
         ],
         yAxis: [
@@ -928,12 +919,6 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Minutes().get
             
             
             
-            <a href="/tags/SpringMvc/">
-                <span class="chip center-align waves-effect waves-light chip-default">SpringMvc</span>
-            </a>
-            
-            
-            
             <a href="/tags/Springboot/">
                 <span class="chip center-align waves-effect waves-light chip-default">Springboot</span>
             </a>
@@ -942,6 +927,12 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Minutes().get
             
             <a href="/tags/Vue/">
                 <span class="chip center-align waves-effect waves-light chip-default">Vue</span>
+            </a>
+            
+            
+            
+            <a href="/tags/SpringMvc/">
+                <span class="chip center-align waves-effect waves-light chip-default">SpringMvc</span>
             </a>
             
             
